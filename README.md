@@ -18,12 +18,6 @@ Marks problematic types with visual indicators:
 
 ## Installation
 
-### From PyPI
-
-```bash
-pip install check-safetensors-file
-```
-
 ### From Source
 
 ```bash
