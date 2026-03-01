@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "check-safetensors-file"
+version = "0.1.0"
+description = "Check safetensors file dtypes and identify problematic types (bf16, fp8)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Charles Montgomery", email = "chazzofalf@gmail.com"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/chazzofalf/model_type_identifier"
+Repository = "https://github.com/chazzofalf/model_type_identifier.git"
+
+[project.scripts]
+check-safetensors-file = "check_safetensors_file.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["check_safetensors_file*"]

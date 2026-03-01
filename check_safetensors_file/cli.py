@@ -1,9 +1,4 @@
-#!/Volumes/projs/projs/model_type_identifier/.venv/bin/python3.12
-"""
-Script to analyze safetensors files and list dtypes found within.
-Marks bf16 with ⚠️ and fp8 variants with 🚫
-"""
-
+"""Command-line interface for check_safetensors_file."""
 import sys
 import struct
 import json
@@ -47,7 +42,7 @@ def parse_safetensors_header(file_path):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python check_safetensors_dtypes.py <safetensors_file>")
+        print("Usage: check-safetensors-file <safetensors_file>")
         sys.exit(1)
     
     file_path = sys.argv[1]
@@ -96,7 +91,3 @@ def main():
     else:
         print()
         print("✅ All checks out, no conversion or consideration needed")
-
-
-if __name__ == '__main__':
-    main()
