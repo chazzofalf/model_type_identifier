@@ -95,7 +95,7 @@ def main():
         print("⚠️ Warning: Brain float (bf16) types detected. YMMV - proceed with caution.")
     else:
         print()
-        print("✅ All checks out, not conversion or consideration needed")
+        print("✅ All checks out, no conversion or consideration needed")
 
 
 if __name__ == '__main__':
